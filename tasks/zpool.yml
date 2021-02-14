@@ -9,6 +9,7 @@
   register: ioc_zpool_status
   ignore_errors: yes
   changed_when: false
+  check_mode: no
 
 - name: Create ioc zpool
   command: 'zpool create {{ host_ioc_zpool_name }} {{ host_ioc_zpool_devices }}'
@@ -27,6 +28,7 @@
   register: srv_zpool_status
   ignore_errors: yes
   changed_when: false
+  check_mode: no
 
 - name: Create srv zpool
   command: 'zpool create {{ host_srv_zpool_name }} {{ host_srv_zpool_devices }}'

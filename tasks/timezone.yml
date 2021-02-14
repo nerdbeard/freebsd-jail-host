@@ -3,6 +3,7 @@
   register: zoneinfo
   changed_when: false
   ignore_errors: yes
+  check_mode: no
 
 - name: Set timezone info
   command: 'tzsetup {{ host_timezone }}'

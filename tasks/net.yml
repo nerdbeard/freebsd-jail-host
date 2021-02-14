@@ -44,6 +44,7 @@
   command: 'hostname'
   register: hostname
   changed_when: false
+  check_mode: no
 
 - name: Set hostname
   command: 'hostname {{ host_hostname }}'
